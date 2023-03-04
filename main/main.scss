@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Phudu:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+.header-container {
+    display: flex;
+    padding-left: 20px;
+    font-family: sans-serif;
+    background-color: black;
+    height: 45px;
+    width: 100%;
+    border: 3px solid white;
+    color: white;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.link:hover {
+    color: rgb(112, 112, 112);
+}
+
+.link {
+    padding-left: 20px;
+    font-family: 'Phudu', cursive;
+    background-color: black;
+    color: white;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    padding-left: 10px;
+    width: 350px;
+    position: absolute;
+    left: 0;
+    color: black;
+    top: calc(100% + .25rem);
+    background-color: white;
+    padding: 1.10rem;
+    border-radius: .25rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .5);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.dropdown.active > .link + .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.wrapper {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+}
+header {
+    position: relative;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+.background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.title {
+    font-size: 7rem;
+    color: white;
+    text-shadow: 0 0 5px black;
+
+}
+
+.exp {
+    grid-column: 2/3;
+}
